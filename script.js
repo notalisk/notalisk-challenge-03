@@ -23,9 +23,12 @@ function generatePassword() {
   chooseChars();
   chooseLength();
   fillPassword();
-  console.log(randomPassword.length);
+  // Turn password from array to string
   var passwordAsString = randomPassword.join("");
+  // Reset variables in case the user wants another password
   randomPassword.length = 0;
+  chosenChars.length = 0;
+  // Return the password in string format
   return passwordAsString;
 }
 
@@ -46,6 +49,17 @@ function chooseChars() {
   // Ask about special characters
   if (window.confirm("Do you want to have special characters in your password?")) {
     chosenChars = chosenChars.concat(specialChars);
+  }
+  checkChars();
+}
+
+// Check that the user has chosen at least one type of character.
+function checkChars() {
+  if (chosenChars.length != 0) {
+
+  } else {
+    window.alert("Invalid! Please Choose at least one type of character to include.");
+    chooseChars();
   }
 }
 

@@ -18,3 +18,4 @@ GitHub Repo:
 https://github.com/notalisk/notalisk-challenge-03
 
 Deployed Project:
+https://notalisk.github.io/notalisk-challenge-03/
